@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="player-container">
+    <div class="now-playing">
+      <span id="song-title">Title</span> - <span id="song-artist">Artist</span>
+    </div>
+    <audio id="audio" preload="metadata"></audio>
+    <div class="controls">
+      <button id="prev" title="Previous">&#9664;&#9664;</button>
+      <button id="play" title="Play">&#9654;</button>
+      <button id="pause" title="Pause" style="display:none;">&#10073;&#10073;</button>
+      <button id="next" title="Next">&#9654;&#9654;</button>
+    </div>
+    <div class="progress-container">
+      <span id="current-time">0:00</span>
+      <input type="range" id="progress" value="0" min="0" max="100">
+      <span id="duration">0:00</span>
+    </div>
+    <div class="volume-container">
+      <span>🔊</span>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7">
+    </div>
+    <div class="playlist-container">
+      <ul id="playlist"></ul>
+      <label><input type="checkbox" id="autoplay"> Autoplay</label>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
